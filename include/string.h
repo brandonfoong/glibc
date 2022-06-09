@@ -151,6 +151,7 @@ libc_hidden_builtin_proto (strrchr)
 libc_hidden_builtin_proto (strspn)
 libc_hidden_builtin_proto (strstr)
 libc_hidden_builtin_proto (ffs)
+libc_hidden_builtin_proto (mempbrk)
 
 #if IS_IN (rtld)
 extern __typeof (__stpcpy) __stpcpy attribute_hidden;

@@ -136,6 +136,21 @@ extern void *memrchr (const void *__s, int __c, size_t __n)
 # endif
 #endif
 
+/* Find the first occurrence of any character in ACCEPT
+   in the first N bytes of S. */
+#ifdef __CORRECT_ISO_CPP_STRING_H_PROTO
+extern "C++"
+{
+extern void *mempbrk (void *__s, const char *__accept, size_t __n)
+     __THROW __asm ("mempbrk") __attribute_pure__ __nonnull ((1, 2));
+extern const void *mempbrk (const void *__s, const char *__accept, size_t __n)
+     __THROW __asm ("mempbrk") __attribute_pure__ __nonnull ((1, 2));
+}
+#else
+extern void *mempbrk (const void *__s, const char *__accept, size_t __n)
+     __THROW __attribute_pure__ __nonnull ((1, 2));
+#endif
+
 
 /* Copy SRC to DEST.  */
 extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
