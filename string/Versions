@@ -91,5 +91,6 @@ libc {
   }
   GLIBC_2.35 {
     __memcmpeq;
+    mempbrk;
   }
 }
