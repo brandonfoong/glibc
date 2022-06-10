@@ -114,6 +114,7 @@ routines := \
   swab \
   wordcopy \
   xpg-strerror \
+  mempbrk \
 # routines
 
 tests := \
